@@ -1,0 +1,29 @@
+server:
+  port: 6010
+spring:
+  application:
+    name: mg-portal
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/platform_posin?characterEncoding=utf-8&useSSL=false&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: dsfd
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  config: classpath:logback-spring.xml
+
+mg-portal-service-path: 'http://127.0.0.1:6010/mg-portal'
+
+
+
+
+
+
+
