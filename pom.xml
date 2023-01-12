@@ -51,6 +51,14 @@
             <artifactId>retrofit-spring-boot-starter</artifactId>
             <version>${retrofit-spring-boot-starter.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

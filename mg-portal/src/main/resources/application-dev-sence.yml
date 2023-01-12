@@ -1,5 +1,7 @@
 server:
   port: 6010
+#  servlet:
+#    context-path: /mg-portal
 spring:
   application:
     name: mg-portal
@@ -16,8 +18,8 @@ mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
-logging:
-  config: classpath:logback-spring.xml
+#logging:
+#  config: classpath:logback-spring.xml
 
 mg-portal-service-path: 'http://127.0.0.1:6010/mg-portal'
 
