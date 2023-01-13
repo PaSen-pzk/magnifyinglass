@@ -6,7 +6,7 @@
 
     <groupId>com.posin</groupId>
     <artifactId>mg-parent</artifactId>
-    <version>${mg-version}</version>
+    <version>11.1007.2023</version>
     <packaging>pom</packaging>
 
     <parent>

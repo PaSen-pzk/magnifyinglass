@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @ClassName : UserEntity
  * @Description : UserEntity
@@ -13,8 +15,9 @@ import lombok.Data;
  * @Date: 2023-01-11 23:33
  */
 @Data
+//@EqualsAndHashCode(callSuper=false)
 @TableName("pfm_user")
-public class UserEntity extends Model<UserEntity> {
+public class UserEntity extends Model<UserEntity> implements Serializable {
 
     @TableId("id")
     private int id;
