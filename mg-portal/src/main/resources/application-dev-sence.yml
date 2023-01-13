@@ -21,7 +21,12 @@ mybatis-plus:
 #logging:
 #  config: classpath:logback-spring.xml
 
-mg-portal-service-path: 'http://127.0.0.1:6010/mg-portal'
+out-system-service-path: 'http://127.0.0.1:7015'
+
+retrofit:
+  base-url: ${out-system-service-path}
+
+
 
 
 
