@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @Author : ZeKun Pan
  * @Date: 2023-01-11 17:50
  */
-public class RESTResponse implements Serializable {
+public class RESTResponse<R> implements Serializable {
 
     private static final long serialVersionUID = 2916781395918379481L;
 
@@ -16,13 +16,21 @@ public class RESTResponse implements Serializable {
 
     private String message;
 
-    private Object data;
+    public R getData() {
+        return data;
+    }
+
+    public void setData(R data) {
+        this.data = data;
+    }
+
+    private R data;
 
     public RESTResponse() {
         this.code = "00";
     }
 
-    public RESTResponse(Object code, String message, Object data) {
+    public RESTResponse(Object code, String message, R data) {
         this.code = code;
         this.message = message;
         this.data = data;
@@ -51,13 +59,5 @@ public class RESTResponse implements Serializable {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public Object getData() {
-        return data;
-    }
-
-    public void setData(Object data) {
-        this.data = data;
     }
 }

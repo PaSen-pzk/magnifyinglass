@@ -19,9 +19,11 @@ public class RetrofitHttpApiTest {
 
     @Autowired
     Retrofit retrofit;
+    @Autowired
+    UserServiceHttpApi userServiceHttpApi;
 
     @Test
-    public void invokeTest() throws IOException {
+    public void BeanInvokeTest() throws IOException {
         UserServiceHttpApi userServiceHttpApi = retrofit.create(UserServiceHttpApi.class);
         Call<RESTResponse> apiResponse = userServiceHttpApi.deploy();
         //同步执行
@@ -43,5 +45,29 @@ public class RetrofitHttpApiTest {
         });
         System.out.println("执行成功");
     }
+
+    @Test
+    public void autowireInvokeTest() throws IOException {
+        Call<RESTResponse> apiResponse = userServiceHttpApi.postTest("");
+        //同步执行
+//        Response<RESTResponse> responseResponse = apiResponse.execute();
+//        System.out.println(responseResponse);
+        //异步执行
+        apiResponse.enqueue(new Callback<RESTResponse>() {
+            @Override
+            public void onResponse(Call<RESTResponse> call, Response<RESTResponse> response) {
+                System.out.println("success");
+                System.out.println(response);
+            }
+
+            @Override
+            public void onFailure(Call<RESTResponse> call, Throwable throwable) {
+                System.out.println("failure");
+                throwable.printStackTrace();
+            }
+        });
+        System.out.println("执行成功");
+    }
+
 
 }

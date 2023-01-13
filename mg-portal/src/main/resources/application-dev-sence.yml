@@ -23,8 +23,25 @@ mybatis-plus:
 
 out-system-service-path: 'http://127.0.0.1:7015'
 
+
+# 默认情况下，所有通过Retrofit发送的http请求都会使用max-idle-connections=5 keep-alive-second=300的默认连接池。
+# 当然，我们也可以在配置文件中配置多个自定义的连接池
+  # 然后通过@RetrofitClient的poolName属性来指定使用。比如我们要让某个接口下的请求全部使用poolName=test1的连接池
 retrofit:
   base-url: ${out-system-service-path}
+  # 自定义的连接池
+  pool:
+    test1:
+      max-idle-connections: 3
+      keep-alive-second: 100
+    test2:
+      max-idle-connections: 5
+      keep-alive-second: 50
+  # 日志打印拦截器
+  logging-interceptor: com.posin.portal.retrofit.interceptor.CustomLoggingInterceptor
+  # Http异常信息格式化器
+  http-exception-message-formatter: com.posin.portal.retrofit.interceptor.CustomHttpExceptionMessageFormatter
+
 
 
 

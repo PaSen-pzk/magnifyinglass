@@ -1,10 +1,14 @@
 package com.posin.portal.retrofit.http;
 
 import com.github.lianjiatech.retrofit.spring.boot.annotation.Intercept;
+import com.github.lianjiatech.retrofit.spring.boot.annotation.RetrofitClient;
 import com.posin.common.response.model.RESTResponse;
 import com.posin.portal.retrofit.interceptor.TimeStampInterceptor;
 import retrofit2.Call;
-import retrofit2.http.*;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.POST;
 
 /**
  * @ClassName : UserServiceHttpApi
@@ -14,7 +18,7 @@ import retrofit2.http.*;
  * @Author : ZeKun Pan
  * @Date: 2023-01-11 17:48
  */
-//@RetrofitClient(baseUrl = "${out-system-service-path}")
+@RetrofitClient(baseUrl = "${out-system-service-path}", poolName = "test2")
 @Intercept(handler = TimeStampInterceptor.class, include = {"/si/**"}, exclude = {"/si/post/test"})
 public interface UserServiceHttpApi {
 

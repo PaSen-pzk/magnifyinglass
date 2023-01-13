@@ -1,10 +1,10 @@
 package com.posin.portal.retrofit.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.springframework.stereotype.Service;
 import com.posin.portal.retrofit.mapper.UserMapper;
 import com.posin.portal.retrofit.model.UserEntity;
 import com.posin.portal.retrofit.service.IUserService;
+import org.springframework.stereotype.Service;
 
 /**
  * @ClassName : UserService
