@@ -15,7 +15,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  */
 @RetrofitScan(basePackages = {"com.posin"})
 @SpringBootApplication(scanBasePackages = "com.posin")
-@MapperScan(basePackages = {"com.posin.**.dao","com.posin.**.mapper"})
+@MapperScan(basePackages = {"com.posin.**.**.dao","com.posin.**.**.mapper"})
 public class PortalApplication extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {

@@ -1,9 +1,8 @@
-package com.posin.portal.http;
+package com.posin.portal.retrofit.http;
 
 import com.github.lianjiatech.retrofit.spring.boot.annotation.Intercept;
-import com.github.lianjiatech.retrofit.spring.boot.annotation.RetrofitClient;
 import com.posin.common.response.model.RESTResponse;
-import com.posin.portal.interceptor.TimeStampInterceptor;
+import com.posin.portal.retrofit.interceptor.TimeStampInterceptor;
 import retrofit2.Call;
 import retrofit2.http.*;
 

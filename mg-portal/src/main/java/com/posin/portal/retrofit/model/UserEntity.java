@@ -1,4 +1,4 @@
-package com.posin.portal.model;
+package com.posin.portal.retrofit.model;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;

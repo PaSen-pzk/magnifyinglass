@@ -1,4 +1,4 @@
-package com.posin.portal.http;
+package com.posin.portal.retrofit.http;
 
 import com.posin.common.response.model.RESTResponse;
 import org.junit.Test;

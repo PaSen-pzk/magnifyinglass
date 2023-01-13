@@ -1,8 +1,8 @@
-package com.posin.portal.annotation;
+package com.posin.portal.retrofit.annotation;
 
 import com.github.lianjiatech.retrofit.spring.boot.annotation.InterceptMark;
 import com.github.lianjiatech.retrofit.spring.boot.interceptor.BasePathMatchInterceptor;
-import com.posin.portal.interceptor.SignInterceptor;
+import com.posin.portal.retrofit.interceptor.SignInterceptor;
 
 import java.lang.annotation.*;
 

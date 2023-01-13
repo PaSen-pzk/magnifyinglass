@@ -1,4 +1,4 @@
-package com.posin.portal.interceptor;
+package com.posin.portal.retrofit.interceptor;
 
 import com.github.lianjiatech.retrofit.spring.boot.interceptor.BasePathMatchInterceptor;
 import okhttp3.HttpUrl;

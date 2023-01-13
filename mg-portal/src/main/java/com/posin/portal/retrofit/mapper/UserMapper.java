@@ -1,7 +1,7 @@
-package com.posin.portal.mapper;
+package com.posin.portal.retrofit.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.posin.portal.model.UserEntity;
+import com.posin.portal.retrofit.model.UserEntity;
 
 /**
  * @ClassName : UserMapper

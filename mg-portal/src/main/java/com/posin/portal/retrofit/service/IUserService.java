@@ -1,7 +1,7 @@
-package com.posin.portal.service;
+package com.posin.portal.retrofit.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.posin.portal.model.UserEntity;
+import com.posin.portal.retrofit.model.UserEntity;
 
 /**
  * @ClassName : IUserService

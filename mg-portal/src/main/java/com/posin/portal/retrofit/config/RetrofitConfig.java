@@ -1,4 +1,4 @@
-package com.posin.portal.config;
+package com.posin.portal.retrofit.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

@@ -1,8 +1,8 @@
-package com.posin.portal.http;
+package com.posin.portal.retrofit.http;
 
 import com.posin.common.response.model.RESTResponse;
-import com.posin.portal.annotation.Sign;
-import com.posin.portal.model.UserEntity;
+import com.posin.portal.retrofit.annotation.Sign;
+import com.posin.portal.retrofit.model.UserEntity;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
